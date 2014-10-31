@@ -8,4 +8,8 @@ class BooksController < ApplicationController
     @book = Book.find params[:id]
     render json: @book.to_json
   end
+
+  def destroy
+    Book.find(params[:id]).destroy
+  end
 end

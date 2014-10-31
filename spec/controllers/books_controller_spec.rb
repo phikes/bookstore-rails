@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe BooksController do
+  # negative cases are mostly defined application controller spec
+
   describe 'GET #index' do
     it 'populates an array of books' do
       get :index
@@ -9,10 +11,18 @@ describe BooksController do
   end
 
   describe 'GET #show' do
-    let(:book) { FactoryGirl.create(:book) }
+    let(:book) { FactoryGirl.create :book }
     it 'populates the requested book' do
       get :show, id: book
       expect(assigns(:book)).to eq(book)
+    end
+  end
+
+  describe 'DELETE #destroy' do
+    let(:book) { FactoryGirl.create :book }
+    it 'deletes the requested book' do
+      delete :destroy, id: book
+      expect(book).to be_destroyed
     end
   end
 end
