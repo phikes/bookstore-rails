@@ -14,6 +14,7 @@ end
 
 group :development, :test do 
   gem 'rspec-rails' 
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', '~> 4.0'
   gem 'guard-rspec'
+  gem 'isbn_validation'
 end
