@@ -4,7 +4,15 @@ describe BooksController do
   describe 'GET #index' do
     it 'populates an array of books' do
       get :index
-      expect(assigns :books).to eq Book.all
+      expect(assigns :books).to eq(Book.all)
+    end
+  end
+
+  describe 'GET #show' do
+    let(:book) { FactoryGirl.create(:book) }
+    it 'populates the requested book' do
+      get :show, id: book
+      expect(assigns(:book)).to eq(book)
     end
   end
 end
