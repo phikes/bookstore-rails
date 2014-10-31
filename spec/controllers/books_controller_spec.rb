@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe BooksController do
   # negative cases are mostly defined application controller spec
+  # TODO negative cases (validations mainly)
 
   describe 'GET #index' do
     it 'populates an array of books' do
