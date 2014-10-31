@@ -4,7 +4,6 @@ gem 'rails', github: 'rails/rails'  # This is a beta rails version!
 gem 'rails-api'
 
 gem 'sqlite3'
-gem 'jbuilder'
 gem 'unicorn-rails'
 
 group :development do
