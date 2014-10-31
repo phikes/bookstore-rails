@@ -25,4 +25,11 @@ describe BooksController do
       expect(book).to be_destroyed
     end
   end
+
+  describe 'POST #create' do
+    let(:book) { FactoryGirl.build :book }
+    it 'creates a new record if valid' do
+      expect { post :create, book: book.attributes }.to change(Book, :count).by 1
+    end
+  end
 end

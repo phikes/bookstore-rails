@@ -12,4 +12,13 @@ class BooksController < ApplicationController
   def destroy
     Book.find(params[:id]).destroy
   end
+
+  def create
+    @book = Book.create book_params
+  end
+
+  private
+  def book_params
+    params.require(:book).permit :title, :author, :isbn, :rating
+  end
 end
