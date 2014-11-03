@@ -1,0 +1,4 @@
+ ☐ Mit OpenLibrary verbinden, um bei Hinzufügen eines Buches weitere Daten zu finden
+ ☐ Validations validieren (Books Controller)
+ ☐ Dateiupload für Cover oder Auswahl aus OpenLibrary ermöglichen
+ ☐ Validate JSON Response
