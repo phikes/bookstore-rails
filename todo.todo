@@ -2,3 +2,4 @@
  ☐ Validations validieren (Books Controller)
  ☐ Dateiupload für Cover oder Auswahl aus OpenLibrary ermöglichen
  ☐ Validate JSON Response
+ ☐ Fehlerfälle in BooksController (create failed, etc)
