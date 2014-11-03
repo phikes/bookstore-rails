@@ -25,4 +25,10 @@ describe Book do
   it 'is invalid with a rating less than 0' do
     expect(FactoryGirl.build :book, rating: -1).to_not be_valid
   end
+
+  it 'is valid with a rating in between 0 and 5' do
+    1.upto 5 do |i|
+      expect(FactoryGirl.build :book, rating: i).to be_valid
+    end
+  end
 end
