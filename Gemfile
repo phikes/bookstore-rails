@@ -6,6 +6,8 @@ gem 'rails-api'
 gem 'sqlite3'
 gem 'unicorn-rails'
 
+gem 'isbn_validation'
+
 group :development do
   gem 'pry-rails'
   gem 'pry-byebug'
@@ -15,5 +17,4 @@ group :development, :test do
   gem 'rspec-rails' 
   gem 'factory_girl_rails', '~> 4.0'
   gem 'guard-rspec'
-  gem 'isbn_validation'
 end
