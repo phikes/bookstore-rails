@@ -3,12 +3,12 @@ class BooksController < ApplicationController
 
   def index
     @books = Book.all
-    render json: @books.to_json
+    render json: @books
   end
 
   def show
     @book = Book.find params[:id]
-    render json: @book.to_json
+    render json: @book
   end
 
   def destroy
@@ -16,7 +16,12 @@ class BooksController < ApplicationController
   end
 
   def create
-    @book = Book.create book_params
+    book = Book.new book_params
+    if book.save
+      render json: book
+    else
+      render json: { errors: book.errors.messages }
+    end
   end
 
   def update
