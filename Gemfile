@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.1.4'
+
 gem 'rails', github: 'rails/rails'  # This is a beta rails version!
 gem 'rails-api'
 
