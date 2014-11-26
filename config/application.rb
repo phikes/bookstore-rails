@@ -8,6 +8,7 @@ Bundler.require(:default, Rails.env)
 
 module BookstoreRails
   class Application < Rails::Application
+    config.relative_url_root = '/api'
     config.generators do |g| 
       g.test_framework :rspec, 
                        fixtures: true, 
