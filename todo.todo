@@ -3,4 +3,4 @@
  ☐ Dateiupload für Cover oder Auswahl aus OpenLibrary ermöglichen
  ☐ Validate JSON Response
  ☐ Fehlerfälle in BooksController (create failed, etc)
-Dropbox-API verwenden, damit PDFs, ePUBs etc verwendet werden können
+ ☐ Dropbox-API verwenden, damit PDFs, ePUBs etc verwendet werden können
