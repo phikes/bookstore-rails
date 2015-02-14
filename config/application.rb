@@ -9,15 +9,22 @@ Bundler.require(:default, Rails.env)
 module BookstoreRails
   class Application < Rails::Application
     config.relative_url_root = '/api'
-    config.generators do |g| 
-      g.test_framework :rspec, 
-                       fixtures: true, 
-                       view_specs: false, 
-                       helper_specs: false, 
-                       routing_specs: false, 
-                       controller_specs: true, 
-                       request_specs: true 
-      g.fixture_replacement :factory_girl, dir: "spec/factories" 
+    config.generators do |g|
+      g.test_framework :rspec,
+                       fixtures: true,
+                       view_specs: false,
+                       helper_specs: false,
+                       routing_specs: false,
+                       controller_specs: true,
+                       request_specs: true
+      g.fixture_replacement :factory_girl, dir: "spec/factories"
+    end
+
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :put, :options]
+      end
     end
   end
 end

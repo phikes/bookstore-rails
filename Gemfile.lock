@@ -124,6 +124,7 @@ GEM
     pry-rails (0.3.2)
       pry (>= 0.9.10)
     rack (1.6.0.beta)
+    rack-cors (0.3.1)
     rack-test (0.6.2)
       rack (>= 1.0)
     rails-api (0.3.1)
@@ -192,6 +193,7 @@ DEPENDENCIES
   isbn_validation
   pry-byebug
   pry-rails
+  rack-cors
   rails!
   rails-api
   rspec-rails
